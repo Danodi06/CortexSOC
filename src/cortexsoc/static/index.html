@@ -249,7 +249,8 @@
     </div>
     
     <script>
-        const API = "http://127.0.0.1:8000";
+        // Use window location or environment variable for API URL
+        const API = window.API_URL || `${window.location.protocol}//${window.location.host}`;
         
         async function fetchHealth() {
             try {

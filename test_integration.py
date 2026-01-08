@@ -12,6 +12,11 @@ import sys
 BASE_URL = "http://127.0.0.1:8000"
 TIMEOUT = 5
 
+# Allow override via environment
+import os
+if os.getenv("CORTEXSOC_URL"):
+    BASE_URL = os.getenv("CORTEXSOC_URL")
+
 
 def print_section(title):
     print(f"\n{'='*60}")
